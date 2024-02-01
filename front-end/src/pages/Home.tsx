@@ -113,7 +113,7 @@ const mockList = [
 
 const HomePage = () => {
   return (
-    <section className="max-w-[1360px] px-[24px] l:px-[0px] w-100% mx-auto">
+    <section className="max-w-[1360px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]">
       <ul className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] align-center">
         {mockList.map((listItem) => (
           <ItemCard
