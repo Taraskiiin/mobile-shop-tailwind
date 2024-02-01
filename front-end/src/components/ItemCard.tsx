@@ -1,4 +1,6 @@
 import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { AvailablePoint } from "./AvailablePoint";
 
 import likeEmptyIcon from "../assets/icons/heart-empty.svg";
@@ -12,6 +14,7 @@ interface ItemCardProps {
   available: boolean;
   whereCanFind: string;
   liked: boolean;
+  id: string;
 }
 
 export const ItemCard: FC<ItemCardProps> = ({
@@ -22,9 +25,19 @@ export const ItemCard: FC<ItemCardProps> = ({
   available,
   whereCanFind,
   liked,
+  id,
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/item/${id}`);
+  };
+
   return (
-    <li className="max-w-[300px] w-full bg-bg rounded-xl p-[10px] relative cursor-pointer transition-transform border border-solid border-backgroundCard transform hover:scale-105 hover:border-[#000] duration-700 ">
+    <li
+      onClick={handleClick}
+      className="max-w-[300px] w-full bg-bg rounded-xl p-[10px] relative cursor-pointer transition-transform border border-solid border-backgroundCard transform hover:scale-105 hover:border-[#000] duration-700 "
+    >
       <img
         src={liked ? likeIcon : likeEmptyIcon}
         alt="like icon"

@@ -1,7 +1,8 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+
+import { Item, Home } from "./pages";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/item/:itemId" element={<Item />} />
       </Routes>
     </>
   );
