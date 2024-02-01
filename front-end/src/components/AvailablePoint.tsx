@@ -12,6 +12,6 @@ export const AvailablePoint: FC<AvailablePointProps> = ({ available }) => {
         available ? "bg-error" : "bg-success",
         "w-[10px] h-[10px] rounded-full"
       )}
-    ></div>
+    />
   );
 };
