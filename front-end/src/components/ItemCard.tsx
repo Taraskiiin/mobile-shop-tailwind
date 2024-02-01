@@ -40,7 +40,7 @@ export const ItemCard: FC<ItemCardProps> = ({
       </p>
       <div className="flex items-center gap-[5px]">
         <AvailablePoint available={available} />
-        <p className="text-primary">{whereCanFind}</p>
+        <p className="text-secondary text-sm">{whereCanFind}</p>
       </div>
     </li>
   );
