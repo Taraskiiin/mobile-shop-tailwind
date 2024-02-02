@@ -21,9 +21,7 @@ export const FeedbackForm: FC = () => {
   const validationSchema = Yup.object({
     comment: Yup.string().required("Comment is required"),
     name: Yup.string().required("Name is required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
+    email: Yup.string().required("Email is required"),
     phone: Yup.string(),
   });
 
@@ -74,7 +72,7 @@ export const FeedbackForm: FC = () => {
           value={values.comment}
           onChange={(event) => setValue("comment", event.target.value)}
         />
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-[10px]">
           <TextField
             id="name"
             type="text"

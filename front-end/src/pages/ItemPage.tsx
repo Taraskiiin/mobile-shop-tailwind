@@ -39,6 +39,16 @@ const ItemPage: React.FC = () => {
 
   return (
     <section className="max-w-[660px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]">
+      <div className="flex items-center gap-[40px] mb-[40px]">
+        <img src={data?.image} alt="product" className="max-w-[50%] w-full" />
+        <div>
+          <h2 className="text-primary text-4xl font-[500] mb-[16px]">
+            {data?.title}
+          </h2>
+          <p className="text-primary text-md mb-[8px]">{data?.description}</p>
+          <p className="text-primary text-xl">{data?.price}</p>
+        </div>
+      </div>
       <ul className="mb-[20px]">
         {data &&
           (showAllReviews ? (

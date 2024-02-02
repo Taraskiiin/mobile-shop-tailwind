@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 
 import { ReviewsType } from "../types";
@@ -8,7 +8,7 @@ interface ReviewCardProps {
   review: ReviewsType;
 }
 
-export const ReviewCard: FC<ReviewCardProps> = ({ review }) => {
+export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   const { author, date, stars, feedback } = review;
   const [showFullFeedback, setShowFullFeedback] = useState(false);
 
@@ -29,7 +29,7 @@ export const ReviewCard: FC<ReviewCardProps> = ({ review }) => {
       >
         {feedback}
       </p>
-      {feedback.length > 100 && (
+      {feedback.length > 80 && (
         <button
           className="text-primary cursor-pointer underline text-sm font-[500] uppercase mt-[20px]"
           onClick={handleReadMore}
