@@ -3,8 +3,6 @@ import React, { useState, ChangeEvent } from "react";
 import passwordHiddenIcon from "../../assets/password-hidden.svg";
 import passwordOpenedIcon from "../../assets/password-opened.svg";
 
-//--------------------------------------------------------
-
 interface TextFieldProps {
   type?: "text" | "password";
   label?: string;
@@ -14,8 +12,6 @@ interface TextFieldProps {
   passwordShow?: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
-
-//--------------------------------------------------------
 
 export const TextField: React.FC<TextFieldProps> = ({
   type = "text",
