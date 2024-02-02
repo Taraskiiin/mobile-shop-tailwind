@@ -1,14 +1,28 @@
 {
-  "home": [
+  "api": [
     {
       "image": "https://i.postimg.cc/d0x9P6tR/s-l1600-removebg-preview.png",
-      "title": "Fast & Furious Mustang",
+      "title": "Mustang",
       "price": "$19.99",
       "description": "Replica of the iconic Mustang from Fast & Furious.",
       "available": true,
       "whereCanFind": "Toy Store A",
       "liked": false,
-      "id": "1"
+      "id": "1",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/1RnyQ3MD/s-l960-removebg-preview.png",
@@ -18,7 +32,21 @@
       "available": false,
       "whereCanFind": "Toy Store B",
       "liked": true,
-      "id": "2"
+      "id": "2",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/yd8P3NvP/s-l640-removebg-preview.png",
@@ -28,7 +56,21 @@
       "available": true,
       "whereCanFind": "Supermarket C",
       "liked": true,
-      "id": "3"
+      "id": "3",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/vT1C9h33/s-l960-removebg-preview-1.png",
@@ -38,7 +80,21 @@
       "available": true,
       "whereCanFind": "Department Store D",
       "liked": false,
-      "id": "4"
+      "id": "4",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/vZPjPCk3/jada-253255038-16-1280x800-removebg-preview.png",
@@ -48,7 +104,21 @@
       "available": false,
       "whereCanFind": "Toy Store E",
       "liked": true,
-      "id": "5"
+      "id": "5",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/J4jH5LDC/harry-potter-1967-ford-anglia-253185002-en-01-removebg-preview.png",
@@ -58,7 +128,21 @@
       "available": true,
       "whereCanFind": "Toy Store F",
       "liked": false,
-      "id": "6"
+      "id": "6",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/3JfV1PP9/fast-furious-2002-nissan-skyline-1-24-253203044-en-00-removebg-preview.png",
@@ -68,7 +152,21 @@
       "available": false,
       "whereCanFind": "Toy Store G",
       "liked": true,
-      "id": "7"
+      "id": "7",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/3RnH29mv/fast-furious-1995-mitsubishi-eclipse-253203007-en-00-removebg-preview.png",
@@ -78,7 +176,21 @@
       "available": true,
       "whereCanFind": "Toy Store H",
       "liked": false,
-      "id": "8"
+      "id": "8",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/VNhhwTq4/batman-the-dark-knight-batmobile-1-24-253215005-en-01.jpg",
@@ -88,7 +200,21 @@
       "available": true,
       "whereCanFind": "Toy Store I",
       "liked": true,
-      "id": "9"
+      "id": "9",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     },
     {
       "image": "https://i.postimg.cc/sDfbppgY/batman-1989-batmobile-1-24-253215002-en-02-removebg-preview.png",
@@ -98,7 +224,21 @@
       "available": false,
       "whereCanFind": "Toy Store J",
       "liked": false,
-      "id": "10"
+      "id": "10",
+      "reviews": [
+        {
+          "author": "John Doe",
+          "date": "September 12,2023",
+          "stars": 5,
+          "feedback": "I recently purchased the Mustang for my nephew, and it's an absolute hit! Fantastic Toy - A Must-Have for child Everywhere"
+        },
+        {
+          "author": "John Doe",
+          "date": "January 30,2024",
+          "stars": 1,
+          "feedback": "Worst toy ever seen. Wheels are rectangles. I can't imagine how to play with it."
+        }
+      ]
     }
   ]
 }

@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { ItemCard } from "../components/ItemCard";
+import { ItemType } from "../types";
 
 const HomePage = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<ItemType[] | null>(null);
 
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/home");
+        const response = await fetch("http://localhost:8000/api");
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const data = await response.json();
-        setData(data);
+        setData(Object.values(data));
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       } finally {
@@ -30,8 +31,9 @@ const HomePage = () => {
   return (
     <section className="max-w-[1360px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]">
       <ul className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] align-center">
-        {data?.length > 0 &&
-          data.map((listItem: any) => (
+        {data &&
+          data?.length > 0 &&
+          data?.map((listItem: any) => (
             <ItemCard
               key={listItem.id}
               image={listItem.image}
