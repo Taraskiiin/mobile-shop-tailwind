@@ -25,7 +25,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
       <div className="relative w-full">
         <textarea
           id={id}
-          placeholder={placeholder ? placeholder : ""}
+          placeholder={placeholder ?? ""}
           value={value}
           onChange={onChange}
           className="py-[13px] px-[16px] text-primary text-md font-[400] w-full rounded-[8px] border border-primary resize-none h-[150px]"

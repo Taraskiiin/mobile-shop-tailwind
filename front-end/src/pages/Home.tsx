@@ -1,51 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { ItemCard } from "../components/ItemCard";
-import { ItemType } from "../types";
 
-const HomePage = () => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<ItemType[] | null>(null);
+import { Product } from "../types";
+import { fetchData } from "../utils/fetchData";
+import { fakeEndpoint } from "../mock-tools/constants";
+
+import { ProductCard } from "../components/ProductCard";
+
+const HomePage: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [data, setData] = useState<Product[] | null>(null);
+
+  const productsEndpoint = fakeEndpoint + "products";
 
   useEffect(() => {
     setLoading(true);
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:8000/api");
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+    const manageFetchedData = async () => {
+      const fetchedData = await fetchData(productsEndpoint);
 
-        const data = await response.json();
-        setData(Object.values(data));
-      } catch (error: any) {
-        console.error("Error fetching data:", error.message);
-      } finally {
-        setLoading(false);
+      if (fetchedData?.length) {
+        setData(fetchedData);
       }
     };
 
-    fetchData();
+    manageFetchedData();
+    setLoading(false);
   }, []);
+
+  if (!data?.length) {
+    return <span>Nothing found</span>;
+  }
 
   return (
     <section className="max-w-[1360px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]">
       <ul className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px] align-center">
-        {data &&
-          data?.length > 0 &&
-          data?.map((listItem: any) => (
-            <ItemCard
-              key={listItem.id}
-              image={listItem.image}
-              title={listItem.title}
-              price={listItem.price}
-              description={listItem.description}
-              available={listItem.available}
-              whereCanFind={listItem.whereCanFind}
-              liked={listItem.liked}
-              id={listItem.id}
-            />
-          ))}
+        {data?.map((product: Product) => (
+          <ProductCard key={product.id} productData={product} />
+        ))}
       </ul>
     </section>
   );

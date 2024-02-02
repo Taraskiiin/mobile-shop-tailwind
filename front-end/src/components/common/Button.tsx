@@ -2,8 +2,10 @@ import React from "react";
 import { PulseLoader } from "react-spinners";
 import cn from "classnames";
 
+import { ButtonType } from "../../types";
+
 interface ButtonProps {
-  type?: "submit" | "reset" | "button";
+  type?: ButtonType;
   label?: string;
   onClick?: () => void;
   loading?: boolean;

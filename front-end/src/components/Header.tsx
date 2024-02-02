@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import cn from "classnames";
+import React from "react";
+
 import { Link } from "react-router-dom";
 
-export const Header: FC = () => {
+export const Header: React.FC = () => {
   return (
     <header className="h-[80px] flex items-center justify-center mb-[20px]">
       <Link to="/">

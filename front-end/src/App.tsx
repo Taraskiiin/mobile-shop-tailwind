@@ -1,16 +1,17 @@
 import React from "react";
-import { Header } from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 
-import { Item, Home } from "./pages";
+import { Product, Home, NotFound } from "./pages";
+import { Header } from "./components/Header";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/item/:id" element={<Item />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

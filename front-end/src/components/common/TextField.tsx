@@ -1,15 +1,16 @@
 import React, { useState, ChangeEvent } from "react";
 
+import { TextFieldType } from "../../types";
+
 import passwordHiddenIcon from "../../assets/password-hidden.svg";
 import passwordOpenedIcon from "../../assets/password-opened.svg";
-
 interface TextFieldProps {
-  type?: "text" | "password";
+  type?: TextFieldType;
   label?: string;
   placeholder?: string;
   id: string;
   value?: string;
-  passwordShow?: boolean;
+  isPasswordVisible?: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -20,9 +21,9 @@ export const TextField: React.FC<TextFieldProps> = ({
   id,
   value,
   onChange,
-  passwordShow = false,
+  isPasswordVisible = false,
 }) => {
-  const [inputType, setInputType] = useState<"text" | "password">(type);
+  const [inputType, setInputType] = useState<TextFieldType>(type);
 
   const toggleInputType = () => {
     setInputType((prevType) => (prevType === "text" ? "password" : "text"));
@@ -44,7 +45,7 @@ export const TextField: React.FC<TextFieldProps> = ({
           onChange={onChange}
           className="py-[13px] pr-[70px] pl-[16px] text-primary text-md font-[400] w-full rounded-[8px] border border-primary"
         />
-        {!!passwordShow && (
+        {Boolean(isPasswordVisible) && (
           <button
             type="button"
             onClick={toggleInputType}

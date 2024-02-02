@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -15,7 +15,7 @@ interface FormValues {
   phone?: string;
 }
 
-export const FeedbackForm: FC = () => {
+export const FeedbackForm: React.FC = () => {
   const [loading, setIsLoading] = useState<boolean>(false);
 
   const validationSchema = Yup.object({
