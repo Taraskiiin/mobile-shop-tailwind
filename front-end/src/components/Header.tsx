@@ -6,7 +6,7 @@ export const Header: FC = () => {
   return (
     <header className="h-[80px] flex items-center justify-center mb-[20px]">
       <Link to="/">
-        <h1 className="w-fit mx-auto flex flex-col gap-[12px] text-center font-serif">
+        <h1 className="w-fit mx-auto flex flex-col gap-[12px] text-center font-serif text-primary">
           <span className="uppercase text-xs font-[500]">
             the innovation leader in real man toys
           </span>

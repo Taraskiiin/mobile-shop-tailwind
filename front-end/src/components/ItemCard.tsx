@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { AvailablePoint } from "./AvailablePoint";
+import { AvailablePoint } from "./common/AvailablePoint";
 
 import likeEmptyIcon from "../assets/icons/heart-empty.svg";
 import likeIcon from "../assets/icons/heart.svg";
@@ -36,7 +36,7 @@ export const ItemCard: FC<ItemCardProps> = ({
   return (
     <li
       onClick={handleClick}
-      className="max-w-[300px] w-full bg-bg rounded-xl p-[10px] relative cursor-pointer transition-transform border border-solid border-backgroundCard transform hover:scale-105 hover:border-[#000] duration-700 "
+      className="max-w-[300px] w-full bg-bg rounded-xl p-[10px] relative cursor-pointer transition-transform border border-solid border-backgroundCard transform hover:scale-105 hover:border-primary duration-700 "
     >
       <img
         src={liked ? likeIcon : likeEmptyIcon}

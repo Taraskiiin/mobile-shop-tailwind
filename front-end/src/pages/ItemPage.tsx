@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
-import { ItemType } from "../types";
 
-const ItemPage = () => {
+import { ItemType } from "../types";
+import { FeedbackForm } from "../components/FeedbackForm";
+
+const ItemPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [data, setData] = useState<ItemType | null>(null);
 
@@ -32,7 +34,9 @@ const ItemPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1360px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]"></section>
+    <section className="max-w-[660px] px-[24px] l:px-[0px] w-100% mx-auto pb-[24px]">
+      <FeedbackForm />
+    </section>
   );
 };
 

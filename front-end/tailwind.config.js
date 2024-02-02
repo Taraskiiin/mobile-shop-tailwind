@@ -8,8 +8,8 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
-        primary: "#999",
-        secondary: "#666",
+        primary: "#28036d",
+        secondary: "#1a00a9",
         bg: "#fff",
         backgroundCard: "#9999994d",
         success: "#38a169",
