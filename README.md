@@ -4,7 +4,7 @@
 2. Open this folder in terminal and run next:
 
 ```bash
-cd front-end`
+cd front-end
 
 npm install
 

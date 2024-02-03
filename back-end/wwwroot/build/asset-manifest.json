@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7d1f3f36.css",
+    "main.js": "/static/js/main.d8dec3c1.js",
+    "static/media/password-opened.svg": "/static/media/password-opened.549a3fd0f612ab0cc2cd5221668fff52.svg",
+    "static/media/heart-empty.svg": "/static/media/heart-empty.dddbbd4d3638c4d513084ba4c3a80270.svg",
+    "static/media/star-empty.svg": "/static/media/star-empty.b3193ac8f7b28440930ce9b461f6b3f1.svg",
+    "static/media/password-hidden.svg": "/static/media/password-hidden.6071821c85edc2adbe48ba91463649d0.svg",
+    "index.html": "/index.html",
+    "static/media/star.svg": "/static/media/star.415e8935499a73f70c037cf7ee6b26f6.svg",
+    "static/media/heart.svg": "/static/media/heart.3ea76654dbcc6d6b5f19dd406af2657c.svg",
+    "main.7d1f3f36.css.map": "/static/css/main.7d1f3f36.css.map",
+    "main.d8dec3c1.js.map": "/static/js/main.d8dec3c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d1f3f36.css",
+    "static/js/main.d8dec3c1.js"
+  ]
+}
