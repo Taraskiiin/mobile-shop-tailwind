@@ -1,51 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { Product, Review } from "../types";
-import { fetchData } from "../utils/fetchData";
-import { fakeEndpoint } from "../mock-tools/constants";
+import { Review } from "../types";
 
 import { FeedbackForm } from "../components/FeedbackForm";
 import { ReviewCard } from "../components/ReviewCard";
+import withReviews, { WithReviewsProps } from "../mock-tools/withReviews";
 
-const ProductPage: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(true);
-  const [productData, setProductData] = useState<Product | null>(null);
-  const [reviews, setReviews] = useState<Review[] | null>(null);
+const ProductPage: React.FC<WithReviewsProps> = (props) => {
   const [showAllReviews, setShowAllReviews] = useState<boolean>(false);
 
-  const { id } = useParams();
-
-  const productEndpoint = fakeEndpoint + "products" + `/${id}`;
-  const reviewsEndpoint = fakeEndpoint + "reviews";
-
-  useEffect(() => {
-    setLoading(true);
-
-    const manageFetchedData = async () => {
-      const fetchedProductData = await fetchData(productEndpoint);
-      const fetchedReviews = await fetchData(reviewsEndpoint);
-
-      if (fetchedProductData) {
-        setProductData(fetchedProductData);
-      }
-
-      if (fetchedReviews.length) {
-        const filteredByIdReview = await fetchedReviews.filter(
-          (review: Review) => review.productId === id
-        );
-
-        setReviews(filteredByIdReview);
-      }
-    };
-
-    manageFetchedData();
-    setLoading(false);
-  }, [id]);
+  const { loading, productData, reviews } = props;
 
   const handleToggleShowAllReviews = () => {
     setShowAllReviews((prev) => !prev);
   };
+
+  if (loading) {
+    return <span>Loading...</span>;
+  }
 
   if (!productData && !reviews?.length) {
     return <span>No data</span>;
@@ -92,4 +65,4 @@ const ProductPage: React.FC = () => {
   );
 };
 
-export default ProductPage;
+export default withReviews(ProductPage);

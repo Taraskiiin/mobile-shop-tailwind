@@ -4,7 +4,6 @@ import { StarType } from "../../types";
 
 import emptyStarIcon from "../../assets/icons/star-empty.svg";
 import starIcon from "../../assets/icons/star.svg";
-import { number } from "yargs";
 
 interface StarRatingProps {
   rating: number;
@@ -20,7 +19,6 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
   const renderStar = (type: StarType, index: number) => {
     return (
       <img
-        key={index}
         src={type === "full" ? starIcon : emptyStarIcon}
         alt={`rating-star-to-element-${index}`}
         className="h-[20px]"
